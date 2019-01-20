@@ -1,7 +1,7 @@
 <?php
 
 // get values from POST
-$uname = $_POST['uname'];
+$uname = ucfirst($_POST['uname']);
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 $repass = $_POST['repass'];
@@ -37,7 +37,7 @@ if($isValid) {
 // add it to the database
 $conn->query("
 	INSERT INTO players(id, uname, email, pass, chip) 
-	VALUES ('$id', '$uname', '$email', '$pass', '100')");
+	VALUES (' ', '$uname', '$email', '$pass', '100')");
 
 // redirect to login
 header("Location: login.php");
