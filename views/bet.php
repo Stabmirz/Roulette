@@ -1,12 +1,11 @@
-<?php include "partials/b-header.php"; ?>
 <br>
-<div class="chip"><?= $player[0]->chip?>
+<div class="chip"><?= $chip?>
     <img src="images/coins.png" width="40px" height="40px"> 
     <a href="shop.php"><i class="fa fa-fw fa-plus"></i></a>
     </div>
 <div class="container text-center" id="main">
     <h1>Bet Screen</h1>
-    <p>Welcome <?= $player[0]->uname;?>
+    <p>Welcome <?= $uname;?>
         
     <div style="display:flex;justify-content:space-around;">
         <div class="bet" >
@@ -14,7 +13,7 @@
 	<div class="alert"><?= $error ?></div>
 <?php } ?>
             <p>Bet Now</p>
-            <form class="form"action="betsubmit.php" method="post" >
+            <form class="form" action="betsubmit.php" method="post" >
                 Amount: <input type="number" name="amount" required> chips<br><br>
                 Number: <select name="number">
                     <?php
@@ -34,7 +33,6 @@
                 <input class="abutton" type="submit" name="submit" value="Bet">
             </form>
         </div>
-        <?php foreach($bets as $bet) { ?>
         <div class="bet">
             <p>Participents</p>
             <table>
@@ -45,15 +43,16 @@
                 <th>Color</th>
                 </tr>
                 <tr>
+        <?php foreach($bets as $bet) { ?>
                 <td><?= $bet->uname ?></td>
                 <td><?= $bet->amount ?></td>
                 <td><?= $bet->number ?></td>
                 <td><?= $bet->color ?></td>
                 </tr>
+        <?php }?>
             </table>
         </div>
     </div>
 </div>
-        <?php }?>
 
 <?php include "partials/footer.php"; ?>

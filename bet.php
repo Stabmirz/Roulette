@@ -1,4 +1,5 @@
 <?php
+include "partials/b-header.php";
 
 $error = isset($_GET['error']) && $_GET['error'] != "" ? $_GET['error'] : false;
 // connect to the database and start the session
@@ -14,24 +15,16 @@ if(empty($mail)) {
 }
 
 // get the player
+$query = $conn->query("SELECT * FROM players WHERE email='$mail'");
+while ($row = $query->fetch_object()) {
+    $player[]=$row;
+    $chip=$player[0]->chip;
+    $uname=$player[0]->uname;
+    $id=$player[0]->id;
+}
 
-// $query = "SELECT * FROM players WHERE email='$mail'";
-// $data = mysqli_query($conn, $query);
-// $isValid = mysqli_num_rows($data)>0;
-// $result= mysqli_fetch_assoc($data);
-// $uname=$result['uname'];
-// $chip=$result['chip'];
 
 // get the Participents
-// $bquery = "SELECT A.uname, B.amount, B.color,B.number FROM players A right join bets B on A.id=B.uid";
-// $bdata = mysqli_query($conn, $query);
-// $btotal = mysqli_num_rows($data)>0;
-// $result= mysqli_fetch_assoc($data);
-//     $buname=$result['uname'];
-//     $bamount=$result['amount'];
-//     $bnumber=$result['number'];
-//     $bcolor=$result['color'];
-
 $bets=[];
 $query = $conn->query("SELECT A.uname, B.amount, B.color,B.number FROM players A right join bets B on A.id=B.uid ");
 while ($row = $query->fetch_object()) {
@@ -39,3 +32,5 @@ while ($row = $query->fetch_object()) {
 }
 
 include "views/bet.php";
+
+include "partials/footer.php";
