@@ -1,3 +1,4 @@
+<?php include "partials/b-header.php";?>
 <br>
 <div class="chip"><?= $chip?>
     <img src="images/coins.png" width="40px" height="40px"> 
@@ -8,14 +9,14 @@
     <p>Welcome <?= $uname;?>
         
     <div style="display:flex;justify-content:space-around;">
-        <div class="bet" >
+        <div>
         <?php if($error) { ?>
 	<div class="alert"><?= $error ?></div>
 <?php } ?>
             <p>Bet Now</p>
             <form class="form" action="betsubmit.php" method="post" >
-                Amount: <input type="number" name="amount" required> chips<br><br>
-                Number: <select name="number">
+                Amount : <input style="width :70px; height: 30px;" type="text" name="amount" required> chips<br><br>
+                Number : <select style="width :130px; height: 30px;" name="number">
                     <?php
                         for ($i=1; $i<=36; $i++)
                         {
@@ -25,7 +26,7 @@
                         }
                         ?>
                     </select><br><br>
-                Color: <select name="color">
+                Color : <select style="width :140px; height: 30px;" name="color">
                     <option value="Red">Red</option>
                     <option value="black">Black</option>
                     <option value="green">Green</option>
@@ -33,23 +34,32 @@
                 <input class="abutton" type="submit" name="submit" value="Bet">
             </form>
         </div>
-        <div class="bet">
+        <div>
             <p>Participents</p>
             <table>
-                <tr>
-                <th>Name</th>
-                <th>Bet Amount</th>
-                <th>Number</th>
-                <th>Color</th>
-                </tr>
-                <tr>
-        <?php foreach($bets as $bet) { ?>
-                <td><?= $bet->uname ?></td>
-                <td><?= $bet->amount ?></td>
-                <td><?= $bet->number ?></td>
-                <td><?= $bet->color ?></td>
-                </tr>
-        <?php }?>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Bet Amount</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Color</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">* minimum 5 participents required to start the game</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <?php foreach($bets as $bet) { ?>
+                        <th scope="row"><?= $bet->uname ?></th>
+                        <td><?= $bet->amount ?></td>
+                        <td><?= $bet->number ?></td>
+                        <td><?= $bet->color ?></td>
+                    </tr>
+                        <?php }?>
+                </tbody>
             </table>
         </div>
     </div>

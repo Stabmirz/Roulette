@@ -13,6 +13,7 @@
 <div class="navbar">
     <a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
     <a href="bet.php"><i class="fa fa-fw fa-gamepad"></i> Bet Screen</a> 
+    <a href="scoreboard.php"><i class="fa fa-fw fa-th-list"></i> Scoreboard</a> 
     <a href="shop.php"><i class="fa fa-fw fa-shopping-bag"></i> Shop</a>
     <div class="right">
         <a href="logout.php"><i class="fa fa-fw fa-sign-out"></i>Logout</a>

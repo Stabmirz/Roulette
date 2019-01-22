@@ -10,9 +10,7 @@
     <p class="index">Your Number: <?= $number?></p>
     <p class="index">Your Color: <?= $color?></p>
 
-    <p class="gift"><?= $winner?></p>
+    <p class="gift"><?= $message?></p>
 </div> 
-<script>
-    document.execCommand('Stop');
-</script>
+
 <?php include "partials/footer.php"; ?>

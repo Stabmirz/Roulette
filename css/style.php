@@ -1,6 +1,12 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Skranji');
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
    margin:0;
    padding:0;
@@ -39,13 +45,11 @@ body {
 }
 
 .alert {
-   margin-top:30px;
-   margin-bottom:-30px;
-   padding: 15px;
-   text-align:center;
-   color:red;
+   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-family: 'Skranji', cursive;
    font-size:24px;
-   background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
 }
 
 .footer {
@@ -114,38 +118,12 @@ h1 {
    cursor:pointer;
 }
 
-table {
-   border-collapse: collapse;
-   border-spacing: 0;
-   font-family: 'Skranji', cursive;
-   font-size: 24px;
-   float:right;
-}
-
-th{
-   text-align: left;
-   padding: 8px;
-   color: White;
-}
-
-td{
-   text-align: left;
-   padding: 8px;
-   color: white;
-   font-size:20px;
-}
-
-tr:nth-child(even){background-color: }
-
-.bet{
-   border:1px solid #ddd;
-   padding: 8px;
-   float:left;
-}
 
 p{
    text-align:center;
-   color: #ff5858;
+   background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
    font-size: 32px;
    font-family: 'Skranji', cursive;
 }
@@ -156,6 +134,54 @@ p{
    font-size:32px;
    margin-right:20px;
    border-radius:10px;
-   background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+   background: linear-gradient(to right, #25c481, #25b7c4);
 }
+
+
+
+table {
+   /* max-width: 960px; */
+   margin: 10px auto;
+   background: linear-gradient(to right, #25c481, #25b7c4);
+}
+
+caption {
+   font-size: 1.6em;
+   font-weight: 400;
+   padding: 10px 0;
+}
+
+thead th {
+   font-weight: 400;
+   background: linear-gradient(to right, #25c481, #25b7c4);
+   color: #FFF;
+}
+
+tr {
+   background: #f4f7f8;
+   border-bottom: 1px solid #FFF;
+   margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+   background: #e8eeef;
+}
+
+th, td {
+   text-align: left;
+   padding: 20px;
+   font-weight: 300;
+}
+
+tfoot tr {
+   background: none;
+}
+
+tfoot td {
+   padding: 10px 2px;
+   font-size: 1em;
+   font-style: italic;
+   color: #fff;
+}
+
 </style>

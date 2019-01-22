@@ -12,6 +12,7 @@
 <body>
 <div class="navbar">
   <a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="scoreboard.php"><i class="fa fa-fw fa-th-list"></i> Scoreboard</a> 
   <a href="contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
   <a href="help.php"><i class="fa fa-fw fa-question"></i> Help</a> 
 </div>

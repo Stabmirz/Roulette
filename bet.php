@@ -1,5 +1,5 @@
 <?php
-include "partials/b-header.php";
+
 
 $error = isset($_GET['error']) && $_GET['error'] != "" ? $_GET['error'] : false;
 // connect to the database and start the session
@@ -32,5 +32,3 @@ while ($row = $query->fetch_object()) {
 }
 
 include "views/bet.php";
-
-include "partials/footer.php";
