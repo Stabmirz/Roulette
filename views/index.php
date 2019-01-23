@@ -4,12 +4,13 @@
     <img src="images/bk.jpg">
     <br>
     <br>
-    <p class="index">Login to Play
+    <div><p class="index">Login to Play</p>
         <button class="abutton" type="button"><a class="button" href="login.php">Login</a></button> 
-    </p>
-    <p class="index">Do not have an account?
+    </div>
+    <div>
+        <p class="index">Do not have an account?</p>
         <button class="abutton" type="button"><a class="button" href="signup.php">Signup</a></button>   
-    </p>
+    </div>
     <br>
     <br>
 </div>  

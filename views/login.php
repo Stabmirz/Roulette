@@ -12,7 +12,10 @@
         <input type="checkbox" onclick="myFunction()">Show Password<br><br>
         <input class="form-submit-button" type="submit" name="submit" value="Submit">
     </form>
-    <p class="index">Do not have an account? <button class="abutton" type="button"><a class="button" href="signup.php">Sign Up</a></button></p>
+    <div>
+        <p class="index">Do not have an account?</p>
+        <button class="abutton" type="button"><a class="button" href="signup.php">Sign Up</a></button>
+    </div>
 </div>
 
 <script>
