@@ -6,19 +6,20 @@
     </div>
 <div class="container text-center" id="main">
     <h1>Bet Screen</h1>
-    <p>Welcome <?= $uname;?>
+    <p class="para">Welcome <?= $uname;?>
         
     <div style="display:flex;justify-content:space-around;">
         <div>
         <?php if($error) { ?>
 	<div class="alert"><?= $error ?></div>
 <?php } ?>
-            <p>Bet Now</p>
+            <p class="para">Bet Now</p>
             <form class="form" action="betsubmit.php" method="post" >
-                Amount : <input style="width :70px; height: 30px;" type="text" name="amount" required> chips<br><br>
-                Number : <select style="width :130px; height: 30px;" name="number">
+                Amount : <input style="width :70px; height: 30px;" type="text" name="amount" placeholder="Bet Amount"required> chips<br><br>
+                Number : <select style="width :130px; height: 30px;" name="number" >
+                        <option selected disabled value="">Select your Number</option>
                     <?php
-                        for ($i=1; $i<=36; $i++)
+                        for ($i=0; $i<=35; $i++)
                         {
                             ?>
                                 <option value="<?php echo $i;?>"><?php echo $i;?></option>
@@ -26,7 +27,8 @@
                         }
                         ?>
                     </select><br><br>
-                Color : <select style="width :140px; height: 30px;" name="color">
+                Color : <select style="width :140px; height: 30px;" name="color" >
+                    <option selected disabled value="">Select your color</option>
                     <option value="Red">Red</option>
                     <option value="black">Black</option>
                     <option value="green">Green</option>
@@ -35,7 +37,7 @@
             </form>
         </div>
         <div>
-            <p>Participents</p>
+            <p class="para">Participents</p>
             <table>
                 <thead>
                     <tr>

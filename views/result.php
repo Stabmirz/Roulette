@@ -13,4 +13,39 @@
     <p class="gift"><?= $message?></p>
 </div> 
 
+
+<script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+       history.pushState(null, null, document.URL);
+   });
+   document.onkeydown = function(e) {
+    var key;
+    if (window.event) {
+    key = event.keyCode
+    }
+    else {
+    var unicode = e.keyCode ? e.keyCode : e.charCode
+    key = unicode
+    }
+
+    switch (key) {//event.keyCode
+    case 116: //F5 button
+    key.returnValue = false;
+    key = 0; //event.keyCode = 0;
+    return false;
+    case 82: //R button
+    if (event.ctrlKey) {
+    key.returnValue = false;
+    key = 0; //event.keyCode = 0;
+    return false;
+    }
+    case 91: // ctrl + R Button
+    event.returnValue= false;
+    key=0;
+    return false;
+    }
+    }
+</script>
+
 <?php include "partials/footer.php"; ?>

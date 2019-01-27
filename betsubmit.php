@@ -34,11 +34,11 @@ $conn->query(" UPDATE players SET chip = $chip - $amount WHERE id='$id'");
 // redirect to bet screen
 header("Location: bet.php");
 
-// is ID in voters table
+// is ID in bets table
 $result = $conn->query("SELECT * FROM bets ");
 $participents = $result->num_rows;
 
 // else not elegible
 if( $participents === 5) {
-	header("Location: result.php");
+	header("Location: resultCount.php");
 }

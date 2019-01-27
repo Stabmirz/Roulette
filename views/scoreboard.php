@@ -8,9 +8,11 @@
                 <tr>
                     <th scope="col">Winning Number</th>
                     <th scope="col">Winning Color</th>
-                    <th scope="col">Winners</th>
-                    <th scope="col">Losers</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Amounts Bet</th>
+                    <th scope="col">Bet Number</th>
+                    <th scope="col">Bet Color</th>
                     <th scope="col">Won</th>
                     <th scope="col">Date</th>
                 </tr>
@@ -25,10 +27,12 @@
                     <?php foreach($scores as $score) { ?>
                     <th scope="row"><?= $score->w_number ?></th>
                     <td><?= $score->w_color ?></td>
-                    <td><?= $score->winners ?></td>
-                    <td><?= $score->losers ?></td>
-                    <td><?= $score->b_amount ?></td>
-                    <td><?= $score->w_amount ?></td>
+                    <td><?= $score->users ?></td>
+                    <td><?= $score->status ?></td>
+                    <td><?= $score->b_amount ?> chips</td>
+                    <td><?= $score->b_number ?></td>
+                    <td><?= $score->b_color ?></td>
+                    <td><?= $score->w_amount ?> chips</td>
                     <td><?= $score->date ?></td>
                 </tr>
                     <?php }?>

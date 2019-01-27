@@ -5,7 +5,7 @@ include "includes/connect.php";
 
 // get the Summary of the Game
 $scores=[];
-$query = $conn->query("SELECT * FROM scoreboard LIMIT 100 ");
+$query = $conn->query("SELECT * FROM scoreboard ORDER BY date DESC LIMIT 100 ");
 while ($row = $query->fetch_object()) {
     $scores[]=$row;
 }

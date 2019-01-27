@@ -7,7 +7,7 @@ $pass= $_POST['pass'];
 // connect to the database and start the session
 include "includes/connect.php";
 
-// is ID in voters table
+// is email in Players table
 $result = $conn->query("SELECT email FROM players WHERE email='$email'");
 $isValid = $result->num_rows > 0;
 
@@ -17,11 +17,11 @@ if( ! $isValid) {
 	exit;
 }
 
-// is ID in votes table
+// is pass in Players table
 $result = $conn->query("SELECT pass FROM players WHERE pass='$pass'");
 $rightpass = $result->num_rows > 0;
 
-// else already voted
+// else wrong password
 if(!$rightpass) {
 	header("Location: login.php?error=Wrong Password");
 	exit;
