@@ -39,6 +39,6 @@ $result = $conn->query("SELECT * FROM bets ");
 $participents = $result->num_rows;
 
 // else not elegible
-if( $participents === 5) {
+if( $participents == 5) {
 	header("Location: resultCount.php");
 }
