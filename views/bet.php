@@ -3,7 +3,7 @@
 <div class="chip"><?= $chip?>
     <img src="images/coins.png" width="40px" height="40px"> 
     <a href="shop.php"><i class="fa fa-fw fa-plus"></i></a>
-    </div>
+</div>
 <div class="container text-center" id="main">
     <h1>Bet Screen</h1>
     <p class="para">Welcome <?= $uname;?>
@@ -15,8 +15,8 @@
 <?php } ?>
             <p class="para">Bet Now</p>
             <form class="form" action="betsubmit.php" method="post" >
-                Amount : <input style="width :70px; height: 30px;" type="text" name="amount" placeholder="Bet Amount"required> chips<br><br>
-                Number : <select style="width :130px; height: 30px;" name="number" >
+                Amount : <input style="width :150px; height: 30px;font-size:14px" type="text" name="amount" placeholder="Chips Amount"required><br><br>
+                Number : <select style="width :150px; height: 30px;font-size:14px" name="number" >
                         <option selected disabled value="">Select your Number</option>
                     <?php
                         for ($i=0; $i<=35; $i++)
@@ -27,7 +27,7 @@
                         }
                         ?>
                     </select><br><br>
-                Color : <select style="width :140px; height: 30px;" name="color" >
+                Color : <select style="width :160px; height: 30px;font-size:14px" name="color" >
                     <option selected disabled value="">Select your color</option>
                     <option value="Red">Red</option>
                     <option value="black">Black</option>

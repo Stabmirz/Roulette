@@ -7,7 +7,7 @@ $mail = $_SESSION['email'];
 
 // else redirect to login
 if(empty($mail)) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit;
 }
 

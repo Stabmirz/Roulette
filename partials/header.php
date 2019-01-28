@@ -13,6 +13,10 @@
 <div class="navbar">
   <a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
   <a href="scoreboard.php"><i class="fa fa-fw fa-th-list"></i> Scoreboard</a> 
-  <a href="contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-  <a href="help.php"><i class="fa fa-fw fa-question"></i> Help</a> 
+  <a href="shop.php"><i class="fa fa-fw fa-shopping-bag"></i> Shop</a> 
+  <div class="right">
+    <a href="contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+    <a href="help.php"><i class="fa fa-fw fa-question"></i> Help</a>
+    <a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a> 
+  </div>
 </div>

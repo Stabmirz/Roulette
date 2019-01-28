@@ -29,5 +29,6 @@ if(!$rightpass) {
 
 // start a session
 $_SESSION['email'] = $email;
+
 // redirect to bet screen
 header("Location: bet.php");

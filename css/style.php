@@ -12,7 +12,10 @@ body {
    padding:0;
    background: #000;
    background-image: url('./images/animation.jpg');
-   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
 }
 .navbar{
    box-sizing: border-box;
@@ -24,6 +27,7 @@ body {
    padding: 0 16px;
    top: 0;
    z-index: 100;
+   position:fixed;
 }
 
 .navbar a{
@@ -47,13 +51,10 @@ body {
 .navbar a:hover, .right a:hover{
    color: #e7bd16;
 }
-.form-submit-button:hover, .abutton:hover{
+.form-submit-button:hover, .abutton:hover, .btn:hover{
    background: #e7bd16;
 }
 
-.content{
-margin-top:100px;
-}
 .alert {
    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
    -webkit-background-clip: text;
@@ -74,8 +75,11 @@ margin-top:100px;
 }
 
 #main {
-   margin-top: 3%;
+   margin-top: 9%;
    margin-bottom: 3%;
+   margin-left: 5%;
+   margin-right: 5%;
+   background: rgba(0,0,0,.1);
    text-align:center;
 }
 
@@ -93,11 +97,27 @@ h1 {
    font-family: 'Skranji', cursive;
    font-size: 34px;
 }
-.index, .form{
-   color: #6fb316;
+.index{
+   color: #fdc300;
    font-family: 'Skranji', cursive;
    font-size: 24px;
 }
+
+.form{
+   color: #fdc300;
+   font-family: 'Skranji', cursive;
+   font-size: 24px;
+   background:rgba(0,0,0,.6);
+   padding:40px;
+}
+
+.text{
+   color: white;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 24px;
+   line-height:1.5;
+}
+
 .abutton {
    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
    font: 25px 'Skranji', cursive;
@@ -131,7 +151,7 @@ h1 {
 
 .para{
    text-align:center;
-   background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+   background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    font-size: 32px;
@@ -142,17 +162,17 @@ h1 {
    float:right;
    color:white;
    font-size:32px;
-   margin-right:20px;
+   margin-top:80px;
+   margin-right:30px;
    border-radius:10px;
-   background: linear-gradient(to right, #25c481, #25b7c4);
+   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 
-
 table {
-   /* max-width: 960px; */
    margin: 10px auto;
-   background: linear-gradient(to right, #25c481, #25b7c4);
+   background: rgba(0,0,0,.4);
+   color:white;
 }
 
 caption {
@@ -163,18 +183,18 @@ caption {
 
 thead th {
    font-weight: 400;
-   background: linear-gradient(to right, #25c481, #25b7c4);
+   background-image: linear-gradient(to right, #434343 0%, black 100%);
    color: #FFF;
 }
 
 tr {
-   background: #f4f7f8;
+   background: rgba(0,0,0,0.5);
    border-bottom: 1px solid #FFF;
    margin-bottom: 5px;
 }
 
 tr:nth-child(even) {
-   background: #e8eeef;
+   background: rgba(0,0,0,.7);
 }
 
 th, td {
@@ -194,36 +214,20 @@ tfoot td {
    color: #fff;
 }
 
-.panel {
-  border-bottom: 5px solid #e0a37b;
-  width: 100%;
-  height: 50px;
-  background-color: #3a3a3a;
-  color: #e0a37b;
-}
-
-h3 {
-    padding-left: 10px;
-    font-family: sans-serif;
-    font-weight: 100;
-    display: inline-block;
-}
-
-.content {
-  margin-top: 65px;
-}
 
 .stuff {
-  height: 220px;
-  background-color: #ffffff;
+  height: 310px;
+  background-color: rgba(0,0,0,.7);
+  color:#fdc300;
   margin-top: 20px;
+  font-size:18px;
   box-shadow: 5px 5px rgba(45, 45, 45, 0.13);
 }
 
 .upper {
-  width: 100%;
-  height: 160px;
-  border-bottom: 1px solid rgba(45, 45, 45, 0.33);
+  width: 280px;
+  height: 180px;
+  border-bottom: 1px solid white;
 }
 
 .shop {
@@ -234,34 +238,18 @@ h3 {
     margin-left: auto;
 }
 
-.downer {
-  margin-top: 15px;
-}
-
-.price {
-   display: inline-block;
-}
-
 .row{
    display:flex;
    justify-content:space-evenly;
 }
+
 .btn {
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 12.5px;
-    margin-top: -3px;
-    float: right;
-    border-radius: 0;
     background-color: #3a3a3a;
+    cursor:pointer;
+    font-size:16px;
 }
-
-.cart{
-   float: right;
-    margin-top: 18px;
-    margin-right: 10px;
-}
-
 
 .modal {
   display: none; 

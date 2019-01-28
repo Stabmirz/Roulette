@@ -7,7 +7,7 @@ $mail = $_SESSION['email'];
 
 // else redirect to login
 if(empty($mail)) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit;
 }
 
@@ -25,11 +25,16 @@ while ($row = $query->fetch_object()) {
 }
 
 // get the player
-// $query = $conn->query("SELECT * FROM players WHERE email='$mail'");
-// while ($row = $query->fetch_object()) {
-//     $players[]=$row;
-//     $uname=$player[0]->uname;
-// }
+$query = $conn->query("SELECT * FROM players WHERE email='$mail'");
+while ($row = $query->fetch_object()) {
+    $players[]=$row;
+    $uname=$players[0]->uname;
+}
 
-// $query=$conn->query("SELECT users ORDER BY date DESC limit 5 FROM scoreboard WHERE users='$uname'" );
+$query=$conn->query("SELECT users FROM (SELECT users FROM scoreboard ORDER BY date DESC LIMIT 5) scoreboard WHERE users='$uname'" );
+$user = $query->num_rows > 0 ;
+
+if(!$user){
+    header("Location: bet.php");
+}
 include "views/summary.php";

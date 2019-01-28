@@ -7,13 +7,13 @@ $mail = $_SESSION['email'];
 
 // else redirect to login
 if(empty($mail)) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit;
 }
 
 // is ID in bets table
-$result = $conn->query("SELECT * FROM bets ");
-$participents = $result->num_rows;
+$query = $conn->query("SELECT * FROM bets ");
+$participents = $query->num_rows;
 
 // else not elegible
 if( $participents !== 5) {

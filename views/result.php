@@ -1,4 +1,4 @@
-<?php include "partials/header.php"; ?>
+<?php include "css/style.php"; ?>
 
 <div class="container text-center" id="main">
     <h1>Result</h1>
@@ -48,4 +48,6 @@
     }
 </script>
 
+<br>
+<br>
 <?php include "partials/footer.php"; ?>

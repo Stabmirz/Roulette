@@ -69,5 +69,6 @@
     }
     }
 </script>
-<br>
+
+
 <?php include "partials/footer.php"; ?>

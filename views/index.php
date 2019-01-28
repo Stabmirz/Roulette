@@ -1,3 +1,5 @@
+<?php include "partials/i-header.php";?>
+
 <div class="container text-center" id="main">
     <h1>American Roulette</h1>
     <p class="gift"><img src="images/gift.png" width='30px' height='30px'> Welcome Bonus for New Player 100 Chips!!!</p>
@@ -12,4 +14,4 @@
     <br>
 </div>
 
-
+<?php include "partials/footer.php";?>

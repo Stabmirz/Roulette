@@ -13,7 +13,7 @@
                     <th scope="col">Amounts Bet</th>
                     <th scope="col">Bet Number</th>
                     <th scope="col">Bet Color</th>
-                    <th scope="col">Won</th>
+                    <th scope="col">Chips Won</th>
                     <th scope="col">Date</th>
                 </tr>
             </thead>
@@ -40,4 +40,8 @@
         </table>
     </div>
 </div>  
+<br>
+<br>
+<br>
+<br>
 <?php include "partials/footer.php"; ?>
