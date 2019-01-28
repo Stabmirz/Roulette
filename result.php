@@ -65,17 +65,14 @@ foreach ($datas as $data){
     $query = $conn->query("UPDATE players SET chip = ($chip + $win_amount) WHERE uname='$uname'");
 
     //redirect to summery 
-    header("Refresh:3; url=summary.php");
+    header("Refresh:10; url=summary.php");
 
     //insert data into scoreboard table
 
-    date_default_timezone_set('America/New_York');
-    $date = date("Y/m/d h:i:sa");
-
     if($win_amount){
-        $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Winner', '$amount','$number', '$color','$win_amount', '$date')");
+    $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Winner', '$amount','$number', '$color','$win_amount', NOW())");
     }else{
-        $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Loser', '$amount', '$number', '$color','$win_amount', '$date')");
+    $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Loser', '$amount', '$number', '$color','$win_amount', NOW())");
     }
 }
 include "views/result.php";

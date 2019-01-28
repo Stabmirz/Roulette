@@ -9,7 +9,7 @@
     <h2 class="para">How to Play</h2>
 
     <ul class="text">
-        <li>You have to log in to play the game. If you don't have an account <a class="button" href="signup.php">Sign Up</a> now.</li>
+        <li>You have to log in to play the game. If you don't have an account <a class="abutton" href="signup.php">Sign Up</a> now.</li>
         <li>Once you sign up, you will be awarded with 100 chips. You can buy more chips from our <a class="button" href="shop.php">Shop.</a></li>
         <li>After Log In you will see the Bet Screen.</li>
         <li>On the Bet Screen place a bet by entering bet amount and selecting color between Black, Red, Green or number between 0 to 35.</li>
@@ -17,7 +17,7 @@
         <li>Once bet is placed you will not be able to remove it.</li>
         <li>You can bet only once per hand.</li>
         <li>Minimum 5 participents are required to start the game.</li>
-        <li>Once the 5th player enter their bet the game will start and you will be able to see the result. After 5 seconds you will be redirected to the Summary page.</li>
+        <li>Once the 5th player enter their bet the game will start and you will be able to see the result. After 10 seconds you will be redirected to the Summary page.</li>
         <li>After visiting summary page, the bet screnn will be available to bet again.</li>
         <li>On the scoreboard you will find the results of last twenty hands of play.</li>
     </ul>

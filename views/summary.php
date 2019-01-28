@@ -1,39 +1,43 @@
 <?php include "partials/b-header.php"; ?>
 
 <div class="container text-center" id="main">
-    <h1>Summary</h1>
-    <p class="gift">Winning Number: <?= $scores[0]->w_number?></p>
-    <p class="gift">Winning Color: <?= $scores[0]->w_color?></p>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">Username</th>
-                    <th scope="col">Amounts Bet</th>
-                    <th scope="col">Bet Number</th>
-                    <th scope="col">Bet Color</th>
-                    <th scope="col">Chips Won</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td colspan="3">* summary of most recent hand</td>
-                </tr>
-            </tfoot>
-            <tbody>
-                <tr>
-                    <?php foreach($scores as $score) { ?>
-                    <th scope="row"><?= $score->users ?></th>
-                    <td><?= $score->b_amount ?>  chips</td>
-                    <td><?= $score->b_number ?></td>
-                    <td><?= $score->b_color ?></td>
-                    <td><?= $score->w_amount ?> chips</td>
-                </tr>
-                    <?php }?>
-            </tbody>
-        </table>
-    </div>
-</div>  
+   <h1>Summary</h1>
+   <div style="display:flex;justify-content:space-evenly;">
+       <div class="form">
+           <p class="para">Winning Number: <?= $scores[0]->w_number?></p>
+           <p class="para">Winning Color: <?= $scores[0]->w_color?></p>
+       </div>
+   </div>
+   <div>
+       <table>
+           <thead>
+               <tr>
+                   <th scope="col">Username</th>
+                   <th scope="col">Amounts Bet</th>
+                   <th scope="col">Bet Number</th>
+                   <th scope="col">Bet Color</th>
+                   <th scope="col">Chips Won</th>
+               </tr>
+           </thead>
+           <tfoot>
+               <tr>
+                   <td colspan="3">* summary of most recent hand</td>
+               </tr>
+           </tfoot>
+           <tbody>
+               <tr>
+                   <?php foreach($scores as $score) { ?>
+                   <th scope="row"><?= $score->users ?></th>
+                   <td><?= $score->b_amount ?>  chips</td>
+                   <td><?= $score->b_number ?></td>
+                   <td><?= $score->b_color ?></td>
+                   <td><?= $score->w_amount ?> chips</td>
+               </tr>
+                   <?php }?>
+           </tbody>
+       </table>
+   </div>
+</div>
 
 <script>
 

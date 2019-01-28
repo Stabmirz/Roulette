@@ -1,17 +1,24 @@
 <?php include "css/style.php"; ?>
 
 <div class="container text-center" id="main">
-    <h1>Result</h1>
-
-    <p class="gift">Winning Number: <?= $win_number?></p>
-    <p class="gift">Winning Color: <?= $win_color?></p>
-
-    <p class="index">Your Bet Amount: <?= $amount?></p>
-    <p class="index">Your Number: <?= $number?></p>
-    <p class="index">Your Color: <?= $color?></p>
-
-    <p class="gift"><?= $message?></p>
-</div> 
+   <h1>Result</h1>
+   <div style="display:flex;justify-content:space-evenly;">
+       <div class="form">
+           <span class="para" style="border-bottom:1px solid white" >Bet Result</span>
+           <br>
+           <p class="index">Winning Number: <?= $win_number?></p>
+           <p class="index">Winning Color: <?= $win_color?></p>
+       </div>
+       <div><img id="winner" style="width:80%;height:42%" src="images/winner.png"></div>
+       <div class="form">
+           <span class="para" style="border-bottom:1px solid white">Your Bet</span>
+           <p class="index"> Bet Amount: <?= $amount?></p>
+           <p class="index"> Number: <?= $number?></p>
+           <p class="index"> Color: <?= $color?></p>
+       </div>
+   </div>
+   <p class="gift"><?= $message?></p>
+</div>
 
 
 <script>
