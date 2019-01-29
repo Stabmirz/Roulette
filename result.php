@@ -70,9 +70,9 @@ foreach ($datas as $data){
     //insert data into scoreboard table
 
     if($win_amount){
-    $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Winner', '$amount','$number', '$color','$win_amount', NOW())");
+    $query = $conn->query("INSERT INTO scoreboard VALUES ('0', '$win_number', '$win_color', '$uname', 'Winner', '$amount','$number', '$color','$win_amount', NOW())");
     }else{
-    $query = $conn->query("INSERT INTO scoreboard VALUES ('', '$win_number', '$win_color', '$uname', 'Loser', '$amount', '$number', '$color','$win_amount', NOW())");
+    $query = $conn->query("INSERT INTO scoreboard VALUES ('0', '$win_number', '$win_color', '$uname', 'Loser', '$amount', '$number', '$color','$win_amount', NOW())");
     }
 }
 include "views/result.php";

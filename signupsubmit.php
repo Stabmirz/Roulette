@@ -37,7 +37,7 @@ if($isValid) {
 // add it to the database
 $conn->query("
 	INSERT INTO players(id, uname, email, pass, chip) 
-	VALUES (' ', '$uname', '$email', '$pass', '100')");
+	VALUES ('0', '$uname', '$email', '$pass', '100')");
 
 // redirect to login
 header("Location: login.php");

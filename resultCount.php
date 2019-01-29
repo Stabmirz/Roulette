@@ -16,7 +16,7 @@ $win_number = rand(0, 35);
 $arr = array("Red"=>"red","Green"=>"green","Black"=>"black");
 $win_color = (array_rand($arr,1));
 
-$query = $conn->query("INSERT INTO results VALUES ('', '$win_number', '$win_color')");
+$query = $conn->query("INSERT INTO results VALUES ('0', '$win_number', '$win_color')");
 
 //redirect to result page
 header("Refresh:0; url=result.php");
