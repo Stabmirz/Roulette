@@ -26,7 +26,7 @@ if($chip<$amount){
 // add it to the database
 $conn->query("
 	INSERT INTO bets(id, uid, amount, color, number) 
-	VALUES ('0, '$id', '$amount', '$color', '$number')");
+	VALUES ('0', '$id', '$amount', '$color', '$number')");
 
 // update into database
 $conn->query(" UPDATE players SET chip = $chip - $amount WHERE id='$id'");
