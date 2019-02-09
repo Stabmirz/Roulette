@@ -1,4 +1,4 @@
-<?php include "partials/b-header.php"; ?>
+<?php include "partials/header.php"; ?>
 
 <div class="container text-center" id="main">
    <h1>Summary</h1>

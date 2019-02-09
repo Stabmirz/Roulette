@@ -1,4 +1,4 @@
-<?php include "partials/i-header.php"; ?>
+<?php include "partials/header.php"; ?>
 
 <div class="container text-center" id="main">
     <?php if($error) { ?>

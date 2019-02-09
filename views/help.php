@@ -9,7 +9,7 @@
     <h2 class="para">How to Play</h2>
 
     <ul class="text">
-        <li>You have to log in to play the game. If you don't have an account <a class="abutton" href="signup.php">Sign Up</a> now.</li>
+        <li>You have to log in to play the game. If you don't have an account <a class="button" href="signup.php">Sign Up</a> now.</li>
         <li>Once you sign up, you will be awarded with 100 chips. You can buy more chips from our <a class="button" href="shop.php">Shop.</a></li>
         <li>After Log In you will see the Bet Screen.</li>
         <li>On the Bet Screen place a bet by entering bet amount and selecting color between Black, Red, Green or number between 0 to 35.</li>

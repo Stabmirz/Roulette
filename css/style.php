@@ -340,4 +340,7 @@
       color: white;
       text-align:center;
    }
+   .login{
+      visibility:hidden;
+   }
 </style>

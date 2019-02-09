@@ -11,12 +11,15 @@
 </head>
 <body>
 <div class="navbar">
-  <a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
-  <a href="scoreboard.php"><i class="fa fa-fw fa-th-list"></i> Scoreboard</a> 
-  <a href="shop.php"><i class="fa fa-fw fa-shopping-bag"></i> Shop</a> 
-  <div class="right">
-    <a href="contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-    <a href="help.php"><i class="fa fa-fw fa-question"></i> Help</a>
-    <a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a> 
-  </div>
+    <a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
+    <a href="bet.php"><i class="fa fa-fw fa-gamepad"></i> Bet Screen</a> 
+    <a href="scoreboard.php"><i class="fa fa-fw fa-th-list"></i> Scoreboard</a> 
+    <a href="shop.php"><i class="fa fa-fw fa-shopping-bag"></i> Shop</a>
+    <div class="right">
+        <a href="contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+        <a href="help.php"><i class="fa fa-fw fa-question"></i> Help</a> 
+        <?php if(isset($_SESSION['email'])){ ?>
+        <a href="logout.php"><i class="fa fa-fw fa-sign-out"></i>Logout</a><?php }else{ ?>
+        <a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a> <?php } ?>
+    </div>
 </div>

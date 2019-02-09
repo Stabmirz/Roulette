@@ -1,4 +1,4 @@
-<?php include "partials/b-header.php";?>
+<?php include "partials/header.php";?>
 <br>
 <div class="chip"><?= $chip?>
   <img src="images/coins.png" width="40px" height="40px">
